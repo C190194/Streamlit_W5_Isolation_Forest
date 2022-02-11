@@ -35,18 +35,18 @@ if select_slide == "Training Process":
     elif step == 'Step 3':
         st.subheader("Step 3:")
         st.write("Use the \"model.decision_function(data)\" function \
-            to compute an anomoly score for each row. The smaller the \
+            to compute an anomaly score for each row. The smaller the \
             score is, the more likely this frame is an outlier.")
-        st.write("Take the negation of the minimum score among all \
-            frames in a file as its anomoly score.")
+        st.write("Take the negative value of the minimum score among all \
+            frames in a file as its anomaly score.")
 
     elif step == 'Step 4':
         st.subheader("Step 4:")
-        st.write("Fit the anomoly scores of all the training files \
+        st.write("Fit the anomaly scores of all the training files \
             using Gamma Distribution. ")
         st.write("Split the distribution with the ratio of 999 to 1 \
             and take the critical value as the threshold. \
-            If a file's anomoly score is larger than the threshold, \
+            If a file's anomaly score is larger than the threshold, \
             then it is considered containing abnormal sounds.")
     
 elif select_slide == "Results":
